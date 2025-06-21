@@ -65,7 +65,7 @@ const LinkPage = () => {
           </h1>
 
           <a
-            href={`${window.location.origin}${link}`}
+            href={`${window.location.host}/${link}`}
             target="_blank"
             className="text-blue-400 hover:underline break-all text-xl sm:text-2xl font-semibold"
           >
