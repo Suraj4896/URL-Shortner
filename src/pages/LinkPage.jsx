@@ -65,11 +65,11 @@ const LinkPage = () => {
           </h1>
 
           <a
-            href={`https://trimrr.in/${link}`}
+            href={`${window.location.origin}${link}`}
             target="_blank"
             className="text-blue-400 hover:underline break-all text-xl sm:text-2xl font-semibold"
           >
-            https://trimrr.in/{link}
+            {`${window.location.host}/${link}`}
           </a>
 
           <a
@@ -86,7 +86,7 @@ const LinkPage = () => {
           </span>
 
           <div className="flex gap-2">
-            <Button variant="outline" onClick={() => navigator.clipboard.writeText(`https://trimrr.in/${link}`)}>
+            <Button variant="outline" onClick={() => navigator.clipboard.writeText(`${window.location.host}/${link}`)}>
               <Copy className="w-4 h-4" />
             </Button>
             <Button variant="outline" onClick={downloadImage}>
